@@ -46,11 +46,11 @@ const petSchema = new mongoose.Schema({
   },
   description: { 
     type: String,
-    minLength: [10, 'Por favor proporciona una descripción real.']
+    minLength: [3, 'Por favor proporciona una descripción real.']
   },
   gender: { 
     type: String, 
-    minLength: [8, 'Por favor proporciona un genero real.'],
+    minLength: [3, 'Por favor proporciona un genero real.'],
   },
   image: { 
     type: String 
@@ -61,4 +61,4 @@ const petSchema = new mongoose.Schema({
 
 //Create the model and export it
 const  Pet = mongoose.model('Pet', petSchema);
-module.exports = Pet, petSchema;
+module.exports = {Pet, petSchema};
