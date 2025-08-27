@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar dependencias
-RUN npm install
+RUN npm install bcryptjs jsonwebtoken
 
 # Copiar el resto del proyecto
 COPY . .
